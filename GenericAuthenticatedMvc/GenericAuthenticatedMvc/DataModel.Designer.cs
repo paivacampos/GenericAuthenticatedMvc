@@ -158,7 +158,7 @@ namespace GenericAuthenticatedMvc
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -177,7 +177,7 @@ namespace GenericAuthenticatedMvc
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value, "Id");
+                    _Id = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -202,7 +202,7 @@ namespace GenericAuthenticatedMvc
             {
                 OnUsernameChanging(value);
                 ReportPropertyChanging("Username");
-                _Username = StructuralObject.SetValidValue(value, false, "Username");
+                _Username = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Username");
                 OnUsernameChanged();
             }
@@ -226,7 +226,7 @@ namespace GenericAuthenticatedMvc
             {
                 OnPasswordChanging(value);
                 ReportPropertyChanging("Password");
-                _Password = StructuralObject.SetValidValue(value, false, "Password");
+                _Password = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Password");
                 OnPasswordChanged();
             }
@@ -237,6 +237,7 @@ namespace GenericAuthenticatedMvc
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -292,7 +293,7 @@ namespace GenericAuthenticatedMvc
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -311,7 +312,7 @@ namespace GenericAuthenticatedMvc
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value, "Id");
+                    _Id = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -336,7 +337,7 @@ namespace GenericAuthenticatedMvc
             {
                 OnUserIdChanging(value);
                 ReportPropertyChanging("UserId");
-                _UserId = StructuralObject.SetValidValue(value, "UserId");
+                _UserId = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("UserId");
                 OnUserIdChanged();
             }
@@ -360,7 +361,7 @@ namespace GenericAuthenticatedMvc
             {
                 OnRole1Changing(value);
                 ReportPropertyChanging("Role1");
-                _Role1 = StructuralObject.SetValidValue(value, false, "Role1");
+                _Role1 = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Role1");
                 OnRole1Changed();
             }
@@ -371,6 +372,7 @@ namespace GenericAuthenticatedMvc
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -417,4 +419,5 @@ namespace GenericAuthenticatedMvc
 
     #endregion
 
+    
 }

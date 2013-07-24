@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericAuthenticatedMvc", "GenericAuthenticatedMvc\GenericAuthenticatedMvc.csproj", "{60D32A3B-5FB7-4111-8884-53FB91B22AE6}"
 EndProject
 Global
