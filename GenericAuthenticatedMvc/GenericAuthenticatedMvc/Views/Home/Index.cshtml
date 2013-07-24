@@ -1,0 +1,26 @@
+﻿@model GenericAuthenticatedMvc.Models.LoginModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Admin", "Admin")
+
+<br />
+
+@Html.ActionLink("UserPage", "UserPage")
+
+<br />
+
+@Html.ActionLink("SuperUser", "SuperUser")
+
+@if (!Roles.IsUserInRole("SuperUser"))
+{
+    <span>You're not a superuser!</span>
+}
+
+<br />
+
+@Html.ActionLink("Logout", "Logout", "Login", null, null)

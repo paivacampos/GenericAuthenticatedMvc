@@ -1,0 +1,38 @@
+﻿@model GenericAuthenticatedMvc.Models.LoginModel
+
+
+@{
+    ViewBag.Title = "Login";
+}
+
+    <h4 class="no-margin-bottom">Come on in!</h4>
+    @Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+        {
+        <fieldset>
+            <legend></legend>
+        <p>
+            @Html.LabelFor(m => m.Username)
+            @Html.TextBoxFor(m => m.Username, new { autofocus = "autofocus" })
+            @Html.ValidationMessageFor(m => m.Username)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)
+        </p>
+        @if(!ViewData.ModelState.IsValid)
+        {
+            <p>
+                It looks like there's an error!
+            </p>
+        }
+        <p class='inline-labels' title="If checked, you will be forgotten after two weeks of inactivity">
+            @Html.CheckBoxFor(m => m.RememberMe)
+            @Html.LabelFor(m => m.RememberMe)
+        </p>
+        <p>
+            <input type="submit" value="Login" />
+        </p>
+        </fieldset>
+        }
